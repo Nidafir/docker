@@ -1,0 +1,23 @@
+version: '3'
+services:
+  tarin:
+    image: firdos2345/movie:v2
+    ports:
+      - "8001:80"
+    deploy:
+      replicas: 3
+
+  movie:
+    image: firdos2345/train:v2
+    ports:
+      - "8002:80"
+    deploy:
+      replicas: 3
+      
+  recharge:
+    image: firdos2345/metro:v2
+    ports:
+      - "8003:80"
+    deploy:
+      replicas: 3
+
